@@ -100,10 +100,10 @@ function Nav({ path }: { path: string }) {
 }
 
 /* ───────────────────────── Home: explore grid ───────────────────────── */
-const yt = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
+const yt = (id: string, q = 'maxresdefault') => `https://i.ytimg.com/vi/${id}/${q}.jpg`
 const EXPLORE = [
   { to: '/amrit', title: 'Project Amrit', tag: 'Safe water · Founder', img: yt(videos.amrit) },
-  { to: '/film', title: 'Measured in Blue', tag: 'Documentary · Director', img: yt(videos.film) },
+  { to: '/film', title: 'Measured in Blue', tag: 'Documentary · Director', img: yt(videos.film, 'hqdefault') },
   { to: '/research', title: 'Research', tag: 'UCLA · IIT Delhi', img: media.lab },
   { to: '/leadership', title: 'Leadership', tag: 'Head Girl · Debate', img: media.viceHeadGirl },
   { to: '/arts', title: 'Arts', tag: 'Kathak · Vocal', img: media.kathak2 },

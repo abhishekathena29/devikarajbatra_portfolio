@@ -641,7 +641,7 @@ main:not(.is-ready) .reveal { transition: none; }
   .writing a { grid-template-columns: 1fr 30px; gap: 8px 16px; }
   .writing__outlet { grid-column: 1 / -1; }
   .contact__blue { width: 50%; right: -30%; }
-  .contact__arrow, }
+  .contact__arrow { display: none; }
 
 @media (max-width: 600px) {
   .explore__grid { grid-template-columns: 1fr; }
