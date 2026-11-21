@@ -519,6 +519,7 @@ export function Footer() {
         <Link to="/" className="nav__logo">Devika Raj Batra</Link>
         <nav>
           {NAV.map(([l, h]) => <Link key={h} to={h}>{l}</Link>)}
+          <Link to="/contact">Contact</Link>
         </nav>
         <nav>
           <a href={links.amritInstagram} target="_blank" rel="noreferrer">Instagram</a>

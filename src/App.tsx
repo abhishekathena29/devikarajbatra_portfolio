@@ -30,6 +30,7 @@ const PAGES: Page[] = [
   { path: '/leadership', title: 'Leadership', label: 'Leadership', render: () => <><Leadership /><Gallery /></> },
   { path: '/arts', title: 'Arts', label: 'Arts', render: () => <Arts /> },
   { path: '/voice', title: 'Voice', label: 'Voice', render: () => <Voice /> },
+  { path: '/contact', title: 'Contact', label: 'Contact', render: () => <Contact /> },
 ]
 
 const findPage = (path: string) => {
@@ -90,7 +91,7 @@ function Nav({ path }: { path: string }) {
         ))}
       </nav>
       <Magnetic>
-        <a href="#contact" className="btn btn--dark btn--sm nav__cta">Get in touch</a>
+        <Link to="/contact" onClick={close} className="btn btn--dark btn--sm nav__cta">Get in touch</Link>
       </Magnetic>
       <button className="nav__burger" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
         <span /><span />
@@ -205,7 +206,6 @@ export default function App() {
       <main key={shown} className={`page${ready ? ' is-ready' : ''}${shown !== '/' ? ' page--inner' : ''}`}>
         {page.render()}
         <NextPage path={shown} />
-        <Contact />
       </main>
       <Footer />
     </>

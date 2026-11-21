@@ -544,6 +544,8 @@ main:not(.is-ready) .reveal { transition: none; }
 .page--inner > section:first-child:not(.amrit):not(.film):not(.lead) { padding-top: clamp(130px, 14vw, 190px); }
 .page--inner .lead:first-child .lead__sticky { padding-top: 40px; }
 
+.page--inner > .contact:first-child { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; }
+
 /* ───────── Home: explore grid ───────── */
 .explore { padding: clamp(100px, 12vw, 160px) 0; }
 .explore .display .it { color: var(--clay); }
